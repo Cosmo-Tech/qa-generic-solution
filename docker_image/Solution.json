@@ -1,0 +1,61 @@
+{
+  "key": "GitRunner",
+  "name": "Git Runner",
+  "description": "A simulator-less git runner",
+  "repository": "git_runner",
+  "alwaysPull": true,
+  "version": "1.0.0",
+  "url": "https://github.com/Cosmo-Tech/qa-generic-solution",
+  "tags": [
+    "Git"
+  ],
+  "parameters": [
+    {
+      "id": "git_repository",
+      "labels": {
+        "fr": "Repository git",
+        "en": "Git repository"
+      },
+      "varType": "string"
+    },
+    {
+      "id": "template_name",
+      "labels": {
+        "fr": "Template a executer",
+        "en": "Template to execute"
+      },
+      "varType": "string"
+    }
+  ],
+  "parameterGroups": [
+    {
+      "id": "parameters",
+      "labels": {
+        "fr": "Parametres",
+        "en": "Parameters"
+      },
+      "parameters": [
+        "git_repository",
+        "template_name"
+      ]
+    }
+  ],
+  "runTemplates": [
+    {
+      "id": "run",
+      "name": "Git based run",
+      "description": "Run a template from git",
+      "tags": [
+        "git"
+      ],
+      "parameterGroups": [
+        "parameters"
+      ]
+    }
+  ],
+  "security": {
+    "default": "none",
+    "accessControlList": [
+    ]
+  }
+}

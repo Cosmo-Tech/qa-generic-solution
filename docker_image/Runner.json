@@ -1,0 +1,32 @@
+{
+  "name": "Run basic template",
+  "description": "Run basic template",
+  "tags": [
+    "Git"
+  ],
+  "runTemplateId": "run",
+  "datasetList": [
+    "d-77zlvvokkvv7"
+  ],
+  "parametersValues": [
+    {
+      "parameterId": "git_repository",
+      "value": "https://github.com/Cosmo-Tech/qa-generic-solution.git",
+      "varType": "string"
+    },
+    {
+      "parameterId": "template_name",
+      "value": "basic_template",
+      "varType": "string"
+    }
+  ],
+  "security": {
+    "default": "viewer",
+    "accessControlList": [
+      {
+        "id": "alice.doe@cosmotech.com",
+        "role": "admin"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+docker build . -t cosmotech/orchestrator_docker_image:latest

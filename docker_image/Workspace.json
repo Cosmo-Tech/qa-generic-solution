@@ -1,0 +1,18 @@
+{
+  "organisationId": "o-kd8op66q7l3n",
+  "name": "Git Runner",
+  "key": "gitrunner",
+  "description": "Run from git",
+  "version": "latest",
+  "tags": [
+    "Git"
+  ],
+  "solution": {
+    "solutionId": "sol-wj5zxr8og4o2"
+  },
+  "security": {
+    "default": "viewer",
+    "accessControlList": [
+    ]
+  }
+}

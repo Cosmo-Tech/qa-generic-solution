@@ -1,0 +1,5 @@
+# ignore idea IDE files
+.idea/
+
+# ignore customized environment files
+**.env

@@ -1,0 +1,18 @@
+{
+  "steps": [
+    {
+      "id": "dl",
+      "commandId": "csm-orc fetch-run-data",
+      "useSystemEnvironment": true
+    },
+    {
+      "id": "run_template",
+      "command": "python",
+      "arguments": [
+        "code/run.py"
+      ],
+      "useSystemEnvironment": true,
+      "precedents": ["dl"]
+    }
+  ]
+}

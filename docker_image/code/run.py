@@ -8,7 +8,10 @@ import pathlib
 import shutil
 import subprocess
 
-logging.basicConfig()
+logging.basicConfig(
+    format="%(asctime)s %(levelname)s\t%(message)s",
+    datefmt="[%Y/%m/%d-%X]", )
+
 logger = logging.getLogger(__name__)
 logger.setLevel(os.environ.get("LOG_LEVEL", "INFO"))
 
@@ -33,10 +36,17 @@ if template_name is None:
 if pathlib.Path("distant").exists():
     shutil.rmtree("distant")
 clone_run = subprocess.run(f"git clone{'' if branch is None else f' -b {branch}'} {repository} distant".split(),
-                           check=True)
+                           check=True,
+                           stdout=subprocess.PIPE,
+                           stderr=subprocess.STDOUT,
+                           universal_newlines=True)
+for l in clone_run.stdout.split('\n'):
+    logger.info(l)
 
 os.environ["CSM_RUN_TEMPLATE_ID"] = template_name
 
-print("=== === === Start sub run === === ===")
+logger.info("=== === === Start sub run === === ===")
+logger.info("\n")
 template_run = subprocess.run(f"csm-orc run run_templates/{template_name}/run.json".split(), cwd="distant", check=True)
-print("=== === === End sub run === === ===")
+logger.info("\n")
+logger.info("=== === === End sub run === === ===")

@@ -2,9 +2,9 @@
   "steps": [
     {
       "id": "echo",
-      "command": "echo",
+      "command": "csm-orc",
       "arguments": [
-        "Hello world"
+        "--version"
       ]
     }
   ]

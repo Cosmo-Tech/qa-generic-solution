@@ -6,4 +6,4 @@ This template is a minimal template for CSM-ORC
 
 ## What does it do ?
 
-It writes "foo bar" to the standard output
+Print the current csm-orc version

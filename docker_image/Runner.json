@@ -23,10 +23,6 @@
   "security": {
     "default": "viewer",
     "accessControlList": [
-      {
-        "id": "alice.doe@cosmotech.com",
-        "role": "admin"
-      }
     ]
   }
 }

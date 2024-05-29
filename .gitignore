@@ -3,3 +3,6 @@
 
 # ignore customized environment files
 **.env
+
+# ignore venvs
+*venv/

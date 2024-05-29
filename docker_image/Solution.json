@@ -54,7 +54,7 @@
     }
   ],
   "security": {
-    "default": "none",
+    "default": "viewer",
     "accessControlList": [
     ]
   }

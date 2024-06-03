@@ -2,10 +2,8 @@
   "steps": [
     {
       "id": "echo",
-      "command": "csm-orc",
-      "arguments": [
-        "--version"
-      ]
+      "command": "python",
+      "arguments": ["test.py"]
     }
   ]
 }

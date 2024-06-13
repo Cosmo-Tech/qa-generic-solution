@@ -1,0 +1,20 @@
+{
+  "steps": [
+    {
+      "id": "Load_from_ECS",
+      "commandId": "csm-data s3-bucket-load",
+      "environment": {
+        "CSM_DATA_BUCKET_NAME": {
+          "value": "DemoECS"
+        }
+      }
+    },
+    {
+      "id": "Send_to_RDS",
+      "commandId": "csm-data rds-send-csv",
+      "precedents": [
+        "Load_from_ECS"
+      ]
+    }
+  ]
+}
